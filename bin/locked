@@ -1,0 +1,22 @@
+#!/usr/bin/env sh
+
+TEXT_COLOR="#ebdbb2"
+
+exec i3lock \
+  --image "$HOME/.config/assets/trianglify.png" \
+  --tiling \
+  --no-unlock-indicator \
+  --force-clock \
+  --screen=2 \
+  \
+  --timecolor="${TEXT_COLOR}" \
+  --datecolor="${TEXT_COLOR}" \
+  \
+  --timesize="$((12 * 15 / 2))" \
+  --datesize="$((12 * 5 / 2))" \
+  \
+  --datepos="tx:ty + $((12 * 25 / 6))" \
+  \
+  --timestr="%H:%M" \
+  --datestr="%e, %A" \
+  "$@"
